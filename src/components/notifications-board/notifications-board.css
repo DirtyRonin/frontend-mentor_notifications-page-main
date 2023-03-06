@@ -1,0 +1,31 @@
+.notifications-board-container {
+  width: 700px;
+  max-height: 800px;
+  background-color: white;
+  box-shadow: 5px 5px 12px -7px black;
+  border-radius: 1rem;
+  padding:1rem;
+}
+
+.notifications-board-container > .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notifications-board-container > .header > .left-side {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.notifications-board-container > .header > .right-side > button {
+  border: none;
+  background-color: transparent;
+  color:var(--dark-grayish-blue);
+  font-weight: 500;
+  font-size: 1rem;
+  font-family: 'Plus Jakarta Sans';
+
+}
