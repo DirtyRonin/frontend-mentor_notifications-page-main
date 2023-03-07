@@ -27,5 +27,9 @@
   font-weight: 500;
   font-size: 1rem;
   font-family: 'Plus Jakarta Sans';
+  cursor: pointer;
+}
 
+.notifications-board-container > .header > .right-side > button:active {
+  color: var(--blue);
 }
