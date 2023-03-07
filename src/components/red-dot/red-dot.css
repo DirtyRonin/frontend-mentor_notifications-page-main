@@ -1,0 +1,7 @@
+.red-dot {
+  display: inline-flex;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--red);
+}
