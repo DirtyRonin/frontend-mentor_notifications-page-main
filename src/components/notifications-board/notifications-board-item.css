@@ -1,0 +1,49 @@
+.notifications-board-item {
+  width: 700px;
+  display: flex;
+  flex-flow: row nowrap;
+  background-color: var(--light-grayish-blue-1);
+  border-radius: 1rem;
+}
+
+.notifications-board-item > .avatar {
+}
+
+.content-with-image {
+    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notifications-board-item > .content {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.notifications-board-item > .content p {
+  margin: 0;
+}
+
+.notifications-board-item > .content > p > .username {
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.notifications-board-item > .content > p > .username:active {
+  color: var(--blue);
+}
+
+.notifications-board-item > .content > p > .group {
+  font-weight: 800;
+  color: var(--dark-grayish-blue);
+  cursor: pointer;
+}
+
+.notifications-board-item > .content > p > .group:active {
+  color: var(--blue);
+}
