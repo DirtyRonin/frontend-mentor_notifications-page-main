@@ -1,3 +1,4 @@
+import { Url } from '../../../util/url';
 import { RedDot } from '../../red-dot';
 import '../notifications-board-item.css';
 
@@ -14,14 +15,14 @@ export function PrivateMessageNotification({ image, username, message, read, rec
   return (
     <div className={`notifications-board-item ${read ? null : 'unread'}`}>
       <div className="avatar">
-        <img alt="" src={image} />
+        <img alt="" src={Url(image)} />
       </div>
       <div className="content">
         <p>
           <span className="username">{username}</span> sent you a private message {read ? null : <RedDot />}
         </p>
         <p className="received">{received}</p>
-        <p className='private-message'>{message}</p>
+        <p className="private-message">{message}</p>
       </div>
     </div>
   );

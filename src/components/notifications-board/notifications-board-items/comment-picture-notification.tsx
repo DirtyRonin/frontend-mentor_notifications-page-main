@@ -1,3 +1,4 @@
+import { Url } from '../../../util/url';
 import { RedDot } from '../../red-dot';
 import '../notifications-board-item.css';
 
@@ -12,9 +13,9 @@ interface CommentPictureNotificationProps {
 
 export function CommentPictureNotification({ image, username, relatedImage, read, received }: CommentPictureNotificationProps) {
   return (
-    <div className={`notifications-board-item ${read ? null : 'unread'}`}>
+    <div className={`notifications-board-item ${read ? '' : 'unread'}`}>
       <div className="avatar">
-        <img alt="" src={image} />
+        <img alt="" src={Url(image)} />
       </div>
       <div className="content">
         <p>
@@ -23,7 +24,7 @@ export function CommentPictureNotification({ image, username, relatedImage, read
         <p className="received">{received}</p>
       </div>
       <div className="related-image">
-        <img  alt="" src={relatedImage} />
+        <img  alt="" src={Url(relatedImage)} />
       </div>
     </div>
   );

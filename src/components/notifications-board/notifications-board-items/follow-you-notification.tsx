@@ -1,3 +1,4 @@
+import { Url } from '../../../util/url';
 import { RedDot } from '../../red-dot';
 import '../notifications-board-item.css';
 
@@ -14,7 +15,7 @@ export function FollowYouNotification({ image, username, group, read, received }
   return (
     <div className={`notifications-board-item ${read ? null : 'unread'}`}>
       <div className="avatar">
-        <img alt="" src={image} />
+        <img alt="" src={Url(image)} />
       </div>
       <div className="content">
         <p>
