@@ -21,6 +21,7 @@ html {
 }
 
 body {
+  background-color: var(--very-light-grayish-blue);
   display: flex;
   justify-content: center;
   align-items: center;
