@@ -13,7 +13,7 @@ html {
   --very-dark-blue: hsl(224, 21%, 14%);
   --grayish-blue: hsl(219, 14%, 63%);
 
-  display: flex;
+  display: grid;
   justify-content: center;
   font-size: 16px;
   height: 100%;
