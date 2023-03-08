@@ -1,53 +1,61 @@
 import './notifications-board-item.css';
-import React from 'react';
 import { notification } from '../../models/notification';
-import { RedDot } from '../red-dot';
+import { PostReactionNotification } from './notifications-board-items/post-reaction-notification';
+import { JoinGroupNotification } from './notifications-board-items/join-group-notification';
+import { FollowYouNotification } from './notifications-board-items/follow-you-notification';
+import { CommentPictureNotification } from './notifications-board-items/comment-picture-notification';
+import { LeftGroupNotification } from './notifications-board-items/left-group-notification';
+import { PrivateMessageNotification } from './notifications-board-items/private-message-notification';
 
 interface NotificationItemProps {
   notification: notification;
 }
 
-export function NotificationsBoardItem({ notification: { image, username, type, group, read, received, relatedImage, message } }: NotificationItemProps) {
+export function NotificationsBoardItem({
+  notification: { image, username, type, group, read, received, relatedImage, message },
+}: NotificationItemProps) {
   const createContentByType = () => {
     switch (type) {
       case 'reacted':
-        return `reacted to your recent post`;
-      case 'followed':
-        return `followed you`;
+        return (
+          <>
+            <PostReactionNotification username={username} received={received} type="reacted" group={group!} read={read} image={image} />{' '}
+          </>
+        );
       case 'joined':
-        return `has joined your group`;
+        return (
+          <>
+            <JoinGroupNotification username={username} received={received} type="joined" group={group!} read={read} image={image} />{' '}
+          </>
+        );
+      case 'followed':
+        return (
+          <>
+            <FollowYouNotification username={username} received={received} type="follow" group={group!} read={read} image={image} />{' '}
+          </>
+        );
       case 'commented':
-        return `commented on your picture`;
+        return (
+          <>
+            <CommentPictureNotification username={username} received={received} type="commented" read={read} image={image} relatedImage={relatedImage!} />{' '}
+          </>
+        );
       case 'left':
-        return `left the group`;
+        return (
+          <>
+            <LeftGroupNotification username={username} received={received} type="left" group={group!} read={read} image={image} />{' '}
+          </>
+        );
       case 'private message':
-        return `sent you a private message`;
+        return (
+          <>
+            <PrivateMessageNotification username={username} received={received} type="private message" read={read} image={image} message={message!} />{' '}
+          </>
+        );
       default:
-        return '';
+        return <></>;
     }
   };
 
-  return (
-    <div className="notifications-board-item">
-      <div className="avatar">
-        <img alt="" src={image} />
-      </div>
-      <div>
-        <div className="content-with-image">
-          <div className="content">
-            <p>
-              <span className="username">{username}</span> {createContentByType()} <span className="group">{group}</span> {read ? null : <RedDot />}
-            </p>
-            <p>{received}</p>
-          </div>
-          {relatedImage ? <img alt="" src={relatedImage} /> : null}
-        </div>
-        {message ? (
-          <div style={{ cursor: 'pointer' }}>
-            <p>Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.</p>
-          </div>
-        ) : null}
-      </div>
-    </div>
-  );
+  return createContentByType();
 }
