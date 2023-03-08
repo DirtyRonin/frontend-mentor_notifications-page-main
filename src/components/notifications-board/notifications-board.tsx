@@ -22,7 +22,7 @@ export function NotificationsBoard() {
       </div>
       <div className="notification-list">
         {notifications.map((notification, index) => (
-          <NotificationsBoardItem key={`notification-item-${notification.image}`} notification={notification} />
+          <NotificationsBoardItem key={`notification-item-${notification.image}-${index}`} notification={notification} />
         ))}
       </div>
     </div>
