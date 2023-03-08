@@ -1,16 +1,16 @@
 .notifications-board-container {
-  width: 700px;
-  max-height: 800px;
+  display: grid;
+  grid-template-columns: minmax(90%, 670px);
   background-color: white;
   box-shadow: 5px 5px 12px -7px black;
   border-radius: 1rem;
-  padding:1rem;
+  padding: .9rem 2rem 0;
 }
 
 .notifications-board-container > .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .notifications-board-container > .header > .left-side {
@@ -23,7 +23,7 @@
 .notifications-board-container > .header > .right-side > button {
   border: none;
   background-color: transparent;
-  color:var(--dark-grayish-blue);
+  color: var(--dark-grayish-blue);
   font-weight: 500;
   font-size: 1rem;
   font-family: 'Plus Jakarta Sans';
@@ -32,4 +32,10 @@
 
 .notifications-board-container > .header > .right-side > button:active {
   color: var(--blue);
+}
+
+.notifications-board-container > .notification-list {
+  display: grid;
+  grid-gap: .5rem;
+  padding-top: .7rem;
 }
