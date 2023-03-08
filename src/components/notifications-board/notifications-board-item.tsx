@@ -11,9 +11,7 @@ interface NotificationItemProps {
   notification: Notification;
 }
 
-export function NotificationsBoardItem({
-  notification: { image, username, type, group, read, received, relatedImage, message },
-}: NotificationItemProps) {
+export function NotificationsBoardItem({ notification: { image, username, type, group, read, received, relatedImage, message } }: NotificationItemProps) {
   const createContentByType = () => {
     switch (type) {
       case 'reacted':
