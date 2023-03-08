@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/frontend-mentor_notifications-page-main/static/css/main.ec9715a4.css",
-    "main.js": "/frontend-mentor_notifications-page-main/static/js/main.c05c2ebd.js",
+    "main.js": "/frontend-mentor_notifications-page-main/static/js/main.7abff82b.js",
     "static/js/787.5c797fd6.chunk.js": "/frontend-mentor_notifications-page-main/static/js/787.5c797fd6.chunk.js",
     "static/media/PlusJakartaSans-VariableFont_wght.ttf": "/frontend-mentor_notifications-page-main/static/media/PlusJakartaSans-VariableFont_wght.ae47e4d01757abf8ad63.ttf",
     "index.html": "/frontend-mentor_notifications-page-main/index.html",
     "main.ec9715a4.css.map": "/frontend-mentor_notifications-page-main/static/css/main.ec9715a4.css.map",
-    "main.c05c2ebd.js.map": "/frontend-mentor_notifications-page-main/static/js/main.c05c2ebd.js.map",
+    "main.7abff82b.js.map": "/frontend-mentor_notifications-page-main/static/js/main.7abff82b.js.map",
     "787.5c797fd6.chunk.js.map": "/frontend-mentor_notifications-page-main/static/js/787.5c797fd6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ec9715a4.css",
-    "static/js/main.c05c2ebd.js"
+    "static/js/main.7abff82b.js"
   ]
 }
