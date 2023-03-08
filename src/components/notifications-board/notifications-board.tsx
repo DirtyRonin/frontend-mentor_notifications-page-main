@@ -1,10 +1,13 @@
 import React from 'react';
 import { useFetchNotifications } from '../../hooks/use-fetch-notifications';
+import { Notification } from '../../models/notification';
 import { Badge } from '../badge';
 import { NotificationsBoardItem } from './notifications-board-item';
 import './notifications-board.css';
 
 export function NotificationsBoard() {
+  const [state, dispatch] = React.useState<Notification[]>();
+
   const notifications = useFetchNotifications();
 
   const getUnreadNotifications = () => notifications.filter((x) => !x.read).length;

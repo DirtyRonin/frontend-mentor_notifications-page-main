@@ -1,5 +1,5 @@
 import './notifications-board-item.css';
-import { notification } from '../../models/notification';
+import { Notification } from '../../models/notification';
 import { PostReactionNotification } from './notifications-board-items/post-reaction-notification';
 import { JoinGroupNotification } from './notifications-board-items/join-group-notification';
 import { FollowYouNotification } from './notifications-board-items/follow-you-notification';
@@ -8,7 +8,7 @@ import { LeftGroupNotification } from './notifications-board-items/left-group-no
 import { PrivateMessageNotification } from './notifications-board-items/private-message-notification';
 
 interface NotificationItemProps {
-  notification: notification;
+  notification: Notification;
 }
 
 export function NotificationsBoardItem({
